@@ -178,10 +178,7 @@ class CachedImage extends React.Component {
         return <Image
           imageStyle={props.style}
           ref={CACHED_IMAGE_REF}
-          {...props,
-          key: props.key,
-          style,
-          source}
+          {...props}
          />
     }
 
