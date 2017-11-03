@@ -175,12 +175,14 @@ class CachedImage extends React.Component {
                 source: this.props.fallbackSource
             });
         }
-        return this.props.renderImage({
-            ...props,
-            key: props.key || source.uri,
-            style,
-            source
-        });
+        return <Image
+          imageStyle={props.style}
+          ref={CACHED_IMAGE_REF}
+          {...props,
+          key: props.key,
+          style,
+          source}
+         />
     }
 
     renderLoader() {
